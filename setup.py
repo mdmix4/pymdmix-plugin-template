@@ -19,6 +19,7 @@ setup(
     python_requires=">=3.8",
     name="pymdmix-plugin-template",
     version=getVersion(),
+    license="MIT",
     description="Plugin template for kick-starting a new project",
     author="ggutierrez-bio",
     author_email="",
@@ -26,4 +27,5 @@ setup(
     data_files=[("pymdmix", ["defaults/pymdmix_plugin_template.yml"])],
     packages=["pymdmix_plugin_template"],
     install_requires=getRequirements(),
+    classifiers=['Development Status :: 3 - Alpha']
 )
