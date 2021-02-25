@@ -1,8 +1,11 @@
 from unittest import mock
+from test.conftest import db_patch
 from pymdmix_core.plugin import PluginManager
 from pymdmix_core.parser import get_mdmix_parser, MDMIX_PARSER
 from pymdmix_plugin_template.crud_plugin_template import CrudPluginTemplate
 
+
+@db_patch
 
 def test_plugin_manager_load_plugin_template():
     plugin_manager = PluginManager()
