@@ -8,17 +8,21 @@ from unittest.mock import patch
 from pymdmix_core.parser import get_mdmix_parser
 from pymdmix_core.plugin.base import PluginManager
 
+your_plugin_name='project'
 
 def get_plugin_manager():
+    '''
+    Check if plugin can be found by the pluging manager
+    '''
     plugin_manager = PluginManager(get_mdmix_parser())
-    plugin_manager.load_plugin("pymdmix_project")
+    plugin_manager.load_plugin(f"pymdmix_{your_plugin_name}")
     return plugin_manager
 
 
 def run_command(command: str, plugin_manager: PluginManager = None):
     plugin_manager = plugin_manager if plugin_manager is not None else get_plugin_manager()
     args = plugin_manager.parser.parse_args(shlex.split(command))
-    plugin_manager.plugins["project"].run(args)
+    plugin_manager.plugins[your_plugin_name].run(args)
 
 
 @contextmanager
