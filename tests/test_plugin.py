@@ -6,8 +6,8 @@ from pymdmix_plugin_template.crud_plugin_template import CrudPluginTemplate
 
 
 @db_patch()
-
 def test_plugin_manager_load_plugin_template():
+
     plugin_manager = PluginManager()
     plugin_manager.load_plugin("pymdmix_plugin_template")
 

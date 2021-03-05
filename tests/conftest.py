@@ -8,12 +8,11 @@ from unittest.mock import patch
 from pymdmix_core.parser import get_mdmix_parser
 from pymdmix_core.plugin.base import PluginManager
 
-your_plugin_name='project'
+your_plugin_name = 'plugin_template'
+
 
 def get_plugin_manager():
-    '''
-    Check if plugin can be found by the pluging manager
-    '''
+    '''Check if plugin can be found by the pluging manager'''
     plugin_manager = PluginManager(get_mdmix_parser())
     plugin_manager.load_plugin(f"pymdmix_{your_plugin_name}")
     return plugin_manager
