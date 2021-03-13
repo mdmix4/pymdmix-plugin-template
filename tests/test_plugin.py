@@ -1,5 +1,5 @@
 from unittest import mock
-from conftest import db_patch
+from .conftest import db_patch
 from pymdmix_core.plugin import PluginManager
 from pymdmix_core.parser import get_mdmix_parser, MDMIX_PARSER
 from pymdmix_plugin_template.crud_plugin_template import CrudPluginTemplate
